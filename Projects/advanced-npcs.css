@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg:#090A0C;
+    --bg-secondary:#0D0F13;
+    --card:#111318;
+    --card-hover:#161920;
+    --text:#F4F5F7;
+    --text-secondary:#969BA6;
+    --text-muted:#666C78;
+    --border:#242832;
+    --accent:#4C8DFF;
+    --accent-hover:#70A5FF;
+
+}
+body{
+    background-color: var(--bg);
+}
+.header{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.header h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+.headertext{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.bodyinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.bodyinfo img{
+    
+    height: 600px;
+    border: 2px solid white;
+}
+
+.linkbtn{
+    margin: 40px;
+    width: 150px;
+    height: 50px;
+    background-color: var(--accent);
+    border: 2px solid white;
+    color: white;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+   transition: 1s;
+}
+
+.linkbtn:hover{
+     transition: 1s;
+     transform: translateY(-10px);
+     cursor: pointer;
+ 
+}
+
+.link2btn{
+    margin: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.link2btn:hover{
+    cursor: pointer;
+    transition: 1s;
+    transform: translateY(-10px);
+}
+
+.sec-btn{
+    display: flex;
+    justify-content: center;
+    min-width: 130px;
+}
+
+.aboutsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #0D0F13;
+}
+
+.aboutsection h1{
+    padding: 30px;
+}
+
+.aboutsection h2{
+    max-width: 900px;
+    text-align: center;
+    line-height: 1.5;
+
+}
+.builtsection{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+    margin-bottom: 60px;
+}
+
+.builtsection h1 {
+    padding: 30px;
+}
+

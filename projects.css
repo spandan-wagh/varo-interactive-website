@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --bg:#090A0C;
+    --bg-secondary:#0D0F13;
+    --card:#111318;
+    --card-hover:#161920;
+    --text:#F4F5F7;
+    --text-secondary:#969BA6;
+    --text-muted:#666C78;
+    --border:#242832;
+    --accent:#4C8DFF;
+    --accent-hover:#70A5FF;
+
+}
+body{
+    background-color: var(--bg);
+    color:var(--text);
+}
+.header{
+  
+
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 10px;
+}
+
+.header h1:hover{
+    cursor: pointer;
+    color: red;
+
+}
+.pbox{
+
+   
+   width: 460px;
+   height: 420px;
+    background-color: var(--card);
+    margin: 100px;
+    justify-items: center;
+    border: 1px solid var(--text-secondary);
+    border-radius: 30px;
+    transition: 0.1s;
+}
+
+.pbox img{
+    width: 460px;
+    border-radius: 30px;
+}
+
+.project-link{
+    text-decoration: none;
+    color: inherit;
+}
+.ptextbox {
+    display:contents;
+}
+.pbox h3{
+    margin-top: 20px;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+.pbox h2{
+    color: var(--text-secondary);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.pbox:hover{
+    cursor: pointer;
+    color: var(--text-muted);
+    background-blend-mode: darken;
+    
+    transform: translateY(-10px);
+}
+
+.pbox:hover img{
+    filter: brightness(75%);
+}
+
