@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Varo Interactive</title>
+    <meta name="description" content="Contact Varo Interactive for project enquiries, technical collaboration, research discussions, or general contact.">
+    <link rel="canonical" href="https://varointeractive.tech/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Contact | Varo Interactive">
+    <meta property="og:description" content="Project enquiries, technical collaboration, research discussions, and general contact.">
+    <meta property="og:url" content="https://varointeractive.tech/contact.html">
+    <meta property="og:image" content="https://varointeractive.tech/thumbnail_main.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Varo Interactive">
+    <meta name="twitter:description" content="Project enquiries, technical collaboration, research discussions, and general contact.">
+    <meta name="twitter:image" content="https://varointeractive.tech/thumbnail_main.png">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-header-inner">
+            <a class="site-brand" href="index.html">VARO INTERACTIVE</a>
+            <nav class="site-nav" aria-label="Primary navigation">
+                <a href="projects.html">Projects</a>
+                <a href="research.html">Research</a>
+                <a href="about.html">About</a>
+                <a href="updates.html">Updates</a>
+                <a href="contact.html" aria-current="page">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <div class="contact-left">
+                <p class="contact-label">CONTACT</p>
+                <h1>LET'S TALK.</h1>
+
+                <p class="contact-intro">
+                    For project enquiries, technical collaboration,
+                    research discussions, or general contact.
+                </p>
+
+                <div class="contact-info">
+                    <div class="contact-row">
+                        <span class="contact-key">EMAIL</span>
+                        <div class="contact-value email-actions">
+                            <a href="mailto:varoplugins@gmail.com?subject=Varo%20Interactive%20Enquiry">varoplugins@gmail.com</a>
+                            <button class="copy-email" type="button" onclick="copyEmail()" aria-label="Copy email address">Copy</button>
+                        </div>
+                    </div>
+
+                    <div class="contact-row">
+                        <span class="contact-key">GITHUB</span>
+                        <div class="contact-value">
+                            <a href="https://github.com/spandan-wagh" target="_blank" rel="noopener noreferrer">github.com/spandan-wagh</a>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="copy-status" id="copy-status" aria-live="polite"></p>
+            </div>
+
+            <div class="contact-mark" aria-hidden="true">@</div>
+        </section>
+    </main>
+
+    <script>
+        function copyEmail() {
+            const email = "varoplugins@gmail.com";
+            const status = document.getElementById("copy-status");
+
+            navigator.clipboard.writeText(email)
+                .then(() => {
+                    status.textContent = "Email copied to clipboard.";
+                    setTimeout(() => status.textContent = "", 1800);
+                })
+                .catch(() => {
+                    status.textContent = "Copy failed. Email: " + email;
+                });
+        }
+    </script>
+</body>
+</html>

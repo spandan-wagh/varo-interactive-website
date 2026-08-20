@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #090A0C;
+    color: white;
+}
+
+.contact-hero{
+    min-height: calc(100vh - 74px);
+    padding: 70px 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-left{
+    width: 60%;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-label{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 26px;
+}
+
+.contact-left h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 72px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+.contact-intro{
+    max-width: 650px;
+    margin-bottom: 38px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.72);
+}
+
+.contact-info{
+    max-width: 680px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 15px;
+}
+
+.contact-row{
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 16px;
+    align-items: center;
+    min-height: 45px;
+}
+
+.contact-key{
+    color: #8f949d;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.contact-value a{
+    color: white;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contact-value a:hover{
+    opacity: 0.7;
+}
+
+.email-actions{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.copy-email{
+    padding: 4px 8px;
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 4px;
+    background: transparent;
+    color: rgba(255,255,255,0.55);
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.copy-email:hover{
+    color: white;
+    border-color: rgba(255,255,255,0.6);
+}
+
+.copy-status{
+    min-height: 20px;
+    margin-top: 12px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+}
+
+.contact-mark{
+    position: absolute;
+    right: 9vw;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: Georgia, serif;
+    font-size: 420px;
+    color: rgba(255,255,255,0.04);
+    pointer-events: none;
+    user-select: none;
+}
+
+@media (max-width: 900px){
+    .contact-hero{ padding: 70px 48px; }
+    .contact-left{ width: 72%; }
+    .contact-left h1{ font-size: 62px; }
+    .contact-mark{ right: -24px; font-size: 350px; }
+}
+
+@media (max-width: 620px){
+    .contact-hero{
+        min-height: calc(100svh - 116px);
+        padding: 58px 22px 62px;
+        align-items: center;
+    }
+
+    .contact-left{ width: 100%; }
+    .contact-label{ font-size: 18px; margin-bottom: 22px; }
+    .contact-left h1{ font-size: clamp(50px, 15vw, 64px); margin-bottom: 20px; }
+    .contact-intro{ font-size: 16px; max-width: 92%; margin-bottom: 30px; }
+    .contact-row{ grid-template-columns: 68px minmax(0, 1fr); gap: 10px; }
+    .contact-info{ font-size: 14px; }
+    .contact-mark{ right: -85px; top: 52%; font-size: 290px; color: rgba(255,255,255,0.03); }
+}
+
+@media (max-width: 380px){
+    .contact-hero{ padding-inline: 18px; }
+    .contact-intro{ max-width: 100%; }
+    .contact-row{ grid-template-columns: 58px minmax(0, 1fr); }
+    .contact-mark{ right: -105px; font-size: 260px; }
+}
