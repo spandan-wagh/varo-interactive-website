@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 :root{
     --bg:#090A0C;
@@ -47,8 +48,10 @@ body{
     align-items: center;
 }
 .bodyinfo img{
-    
+    width: auto;
     height: 600px;
+    max-width: 92vw;
+    object-fit: contain;
     border: 2px solid white;
 }
 
@@ -129,3 +132,76 @@ body{
     padding: 30px;
 }
 
+
+
+/* ===== RESPONSIVE LAYOUT ===== */
+@media (max-width: 760px) {
+    .header { padding: 24px 20px 0; text-align: center; }
+    .header h1 { font-size: 28px; }
+
+    .headertext {
+        margin: 18px 22px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .bodyinfo { padding-inline: 18px; }
+    .bodyinfo img {
+        width: auto;
+        height: auto;
+        max-height: 62svh;
+        max-width: min(92vw, 380px);
+    }
+
+    .linkbtn {
+        margin: 28px 0 18px;
+        width: 150px;
+        min-height: 48px;
+    }
+
+    .sec-btn {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 18px 24px;
+    }
+
+    .link2btn { margin: 0; min-height: 48px; }
+
+    .aboutsection { padding: 0 22px 32px; }
+    .aboutsection h1 { padding: 28px 0 18px; text-align: center; font-size: 26px; }
+    .aboutsection h2 { font-size: 17px; line-height: 1.55; }
+
+    .builtsection { padding: 0 22px; margin-bottom: 42px; }
+    .builtsection h1 { padding: 28px 0 18px; font-size: 26px; }
+    .builtsection h2 {
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: center;
+        max-width: 320px;
+    }
+
+    .linkbtn:hover,
+    .link2btn:hover { transform: translateY(-4px); }
+}
+
+@media (max-width: 420px) {
+    .header h1 { font-size: 25px; }
+    .headertext { font-size: 14px; }
+    .bodyinfo img { max-width: 88vw; }
+    .sec-btn { flex-direction: column; align-items: center; }
+    .link2btn { width: min(210px, 75vw); }
+}
+
+.back-link{
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    z-index: 3;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+.back-link:hover{ color: white; transform: translateX(-3px); }

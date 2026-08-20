@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -39,13 +40,21 @@ body{
     color: red;
 
 }
+
+.projectlist{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 24px;
+}
+
 .pbox{
 
    
    width: 460px;
-   height: 420px;
+   min-height: 420px;
     background-color: var(--card);
-    margin: 100px;
+    margin: 80px auto;
     justify-items: center;
     border: 1px solid var(--text-secondary);
     border-radius: 30px;
@@ -53,7 +62,9 @@ body{
 }
 
 .pbox img{
-    width: 460px;
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 30px;
 }
 
@@ -87,3 +98,73 @@ body{
     filter: brightness(75%);
 }
 
+.back-link{
+    position: absolute;
+    top: 28px;
+    left: 32px;
+
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.back-link:hover{
+    color: white;
+    transform: translateX(-3px);
+}
+
+/* ===== RESPONSIVE LAYOUT ===== */
+@media (max-width: 700px) {
+    .header {
+        height: auto;
+        min-height: 92px;
+        padding: 42px 52px 18px;
+        text-align: center;
+    }
+
+    .header h1 {
+        font-size: clamp(22px, 7vw, 30px);
+        letter-spacing: 5px;
+    }
+
+    .back-link { top: 18px; left: 18px; }
+    .projectlist { padding: 0 18px; }
+
+    .pbox {
+        width: min(100%, 460px);
+        min-height: 0;
+        margin: 44px auto 60px;
+        border-radius: 22px;
+    }
+
+    .pbox img { border-radius: 22px; }
+
+    .pbox h3 {
+        font-size: 22px;
+        margin: 18px 18px 0;
+    }
+
+    .pbox h2 {
+        font-size: 17px;
+        line-height: 1.45;
+        margin-inline: 18px;
+    }
+
+    .viewprojectlink { padding-bottom: 22px; }
+
+    .pbox:hover { transform: translateY(-5px); }
+}
+
+@media (max-width: 420px) {
+    .header h1 { letter-spacing: 3px; }
+    .pbox { margin-top: 34px; border-radius: 18px; }
+    .pbox img { border-radius: 18px; }
+    .pbox h3 { font-size: 20px; }
+    .pbox h2 { font-size: 15px; }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Varo Interactive</title>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+<section class="contact-hero">
+<a class="back-link" href="index.html">← Back</a>
+    <div class="contact-left">
+
+        <p class="contact-label">CONTACT</p>
+
+        <h1>LET'S TALK.</h1>
+
+        <p class="contact-intro">
+            For project enquiries, technical collaboration,
+            research discussions, or general contact.
+        </p>
+
+        <div class="contact-info">
+
+            <p>
+                <span>EMAIL</span>
+
+                <button
+                    class="email-copy"
+                    id="email-copy"
+                    type="button"
+                    onclick="copyEmail()"
+                >
+                    varoplugins@gmail.com
+                </button>
+            </p>
+
+            <p>
+                <span>GITHUB</span>
+
+                <a
+                    href="https://github.com/spandan-wagh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    github.com/spandan-wagh
+                </a>
+            </p>
+
+        </div>
+
+        <p class="copy-status" id="copy-status"></p>
+
+    </div>
+
+    <div class="contact-mark">@</div>
+
+</section>
+
+
+<script>
+function copyEmail() {
+    const email = "varoplugins@gmail.com";
+
+    navigator.clipboard.writeText(email)
+        .then(() => {
+
+            const emailButton = document.getElementById("email-copy");
+            const status = document.getElementById("copy-status");
+
+            emailButton.textContent = "Copied!";
+            status.textContent = "Email copied to clipboard.";
+
+            setTimeout(() => {
+                emailButton.textContent = email;
+                status.textContent = "";
+            }, 1800);
+
+        })
+        .catch(() => {
+
+            const status = document.getElementById("copy-status");
+
+            status.textContent =
+                "Could not copy automatically. Email: " + email;
+
+        });
+}
+</script>
+
+</body>
+
+</html>
