@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bg:#090A0C;
+    --bg-secondary:#0D0F13;
+    --card:#111318;
+    --card-hover:#161920;
+    --text:#F4F5F7;
+    --text-secondary:#969BA6;
+    --text-muted:#666C78;
+    --border:#242832;
+    --accent:#4C8DFF;
+    --accent-hover:#70A5FF;
+
+}
+body{
+    background-color: #090b0e;
+    color: white;
+}
+.about-hero{
+    min-height: 700px;
+    padding: 70px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-label{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 28px;
+}
+
+.about-left h1{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 72px;
+    letter-spacing: 3px;
+    margin-bottom: 26px;
+}
+
+.about-left h2{
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 500;
+    max-width: 850px;
+      margin-bottom: 28px;
+}
+
+.about-left p{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    max-width: 700px;
+};
+
+
+.about-links{
+   display: flex;
+    gap: 36px;
+    margin-top: 30px;
+}
+
+.about-links a{
+    color: white;
+    text-decoration: none;
+
+    font-family: "Lexend Deca", sans-serif;
+        font-size: 17px;
+
+    transition: transform 0.25s ease,
+                opacity 0.25s ease;
+}
+
+.about-links a:hover{
+    transform: translateY(-3px);
+    opacity: 0.7;
+}
+
+.about-mark{
+    position: relative;
+overflow: hidden;
+    right: 8vw;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-family: Georgia, serif;
+    font-size: 430px;
+    line-height: 0.8;
+
+    color: rgba(255,255,255,0.05);
+
+    pointer-events: none;
+    user-select: none;
+}
+.about-left{
+    width: 62%;
+    z-index: 2;
+}
